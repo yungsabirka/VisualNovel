@@ -17,4 +17,4 @@
 - **Total Time** - 30 hours
 
 ---
-[Watch Gameplay](https://drive.google.com/drive/folders/1YYk9En-Zjzn-N1NhUVafthQULIZ2l6O_?usp=drive_link)
+[Watch Gameplay](https://youtu.be/0UlQdpdZJCg?si=MI0GBTYA8fKcd6Ur)
