@@ -1,0 +1,108 @@
+@back Bar
+
+@if currentBarLabel!=""
+@goto .{currentBarLabel}
+@endif
+
+# Intro
+@set currentBarLabel="Intro"
+You walk into a noisy bar, where the air is filled with thick smoke and the hum of conversation.
+The neon lights flicker, casting coloured reflections on the faces of the customers.
+You look around, trying to find the Alex Rola mentioned. Suddenly, a tall man with a piercing stare approaches you.
+
+Alex.Talk: Hi, {name}. You must be the one Rola told me about.
+@char Alex.Normal
+{name}: Yeah, that's me. And you must be Alex?
+
+@set "quest=\"Get assignment from Alex\""
+
+Alex.Talk: Exactly. It's good to finally meet you. [i] Rola's been talking about you a lot. What do you think of our place?
+
+@choice "It's beautiful here, although a bit noisy" goto:.GoodBar
+@choice "To be honest, it doesn't look good, it's like it's for drug addicts and gangsters" goto:.BadBar
+@stop
+
+# BadBar
+Alex.HappyTalk: Hahaha, you have a backbone for telling me so bluntly.
+@goto .StartMinigame
+
+# GoodBar
+Alex.Talk: I'm glad you like it here.
+
+# StartMinigame
+Alex.Talk: It's also one of the few places where you can discuss business without anyone else hearing about it. [i] But let's get to the point. Before we go on a mission, we need to make sure you're ready.
+Alex.Talk: I suggest we do a little training.
+
+{name}: All right, we can get started
+@StartMiniGame
+
+
+# MinigameEnded
+@set currentBarLabel="MinigameEnded"
+@set lockRooftop=false
+@back Bar
+@showUI QuestsUI
+
+Alex.HappyTalk: Well done, {name}! You exceeded my expectations. [i] Great, so we can move on to the assignment.
+You need to pick up a suitcase on the roof of a building in the next block. [i] Use that to get in, then go up to the roof. There shouldn't be any people there, just pick up the suitcase and come back here.
+‘The card's being passed around.’
+Alex.HappyTalk: Sounds simple, right? Just make sure the alarm doesn't go off when you get the case.
+
+{name}: All right, I'll be on my way.
+Alex.HappyTalk: Good luck.
+
+@char Alex.Happy pos:120 wait:true
+@hideChars wait:true
+
+@set "quest=\"Pick up the suitcase from Rooftop\""
+
+@showUI OpenMapButtonUI
+@stop
+
+
+# TaskCompleted
+@back Bar
+@set lockRooftop=true
+@set currentBarLabel="TaskCompleted"
+{name}: It was dangerous...
+You find yourself in the bar where you met Alex before. But he's no longer there, only a note.
+
+@choice "Read the note"
+@stop
+
+It says, ‘Go to the balcony where you met Rola, I'll be waiting for you there.’
+
+@set quest="Find Alex on the balcony"
+
+@set currentBalconyLabel="Ending"
+@showUI OpenMapButtonUI
+@stop
+
+# AlexHasCase
+@char Alex
+Alex.HappyTalk: Thank you for giving the case to me and not that stuck-up woman. [i] If anything, my bar is always open to you.
+{name}: Thank you, I'll keep that in mind.
+@hideChars wait:true
+@goto Street
+@stop
+
+# AlexDoesntHasCase
+@char Alex
+Alex.Angry: So why did you come here. My bar is closed to you forever.
+
+@if hasCase
+@choice "Give the case to Alex" goto:.GiveToAlexPersonally
+@choice "Keep the case"
+@stop
+@endif
+Alex.TooAngry: I told you the bar is closed to you, get out of here!
+@hideChars wait:true
+@goto Street
+@stop
+
+# GiveToAlexPersonally
+@set hasCase=false
+@set currentBarLabel="AlexHasCase"
+Alex.HappyTalk: That's it, rookie! I didn't expect you to twist it like that. [i] So this whole scene was to make Rola think you'd keep the briefcase. You know how to surprise me.
+@goto .AlexHasCase
+@stop

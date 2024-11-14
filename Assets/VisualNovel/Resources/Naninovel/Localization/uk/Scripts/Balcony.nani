@@ -1,0 +1,132 @@
+; English <en> to Ukrainian <uk> localization document for `Balcony` naninovel script
+
+# 6bf1590a
+; You find yourself in a bustling city, having recently arrived after hearing rumors of strange events that needed investigating. A contact named Rola, known for her insight and resourcefulness, had reached out to you with an urgent message.
+Ви опинилися в галасливому місті, куди нещодавно приїхали, почувши чутки про дивні події, які потребують розслідування. Зв'язкова на ім'я Рола, відома своєю проникливістю та винахідливістю, звернулася до вас з терміновим повідомленням.
+
+# 44826777
+; Rola.HappyTalk: Ah, you're finally here. Before we start, tell me your name.
+Rola.HappyTalk: А, нарешті ти тут. Перш ніж ми почнемо, скажи мені своє ім'я.
+
+# 81cca336
+; @input name summary:"Choose your name."
+@input name summary:"\"Виберіть своє ім'я\"."
+
+# 3a1c4e37
+; Rola.HappyTalk: Good {name} Now listen closely. There’s a particular shipment—an item that needs discreet handling. Alex in the bar has the details you need. Seek him out and stay alert. We’re counting on you.
+Rola.HappyTalk: Добре, {name}. Тепер слухай уважно. Є особливий вантаж, який потребує обережного поводження. Алекс у барі знає всі деталі. Знайдіть його і будьте напоготові. Ми розраховуємо на вас.
+
+# bf475ccf
+; {name}: Understood. I’ll find Alex.
+{name}: Зрозумів. Я знайду Алекса.
+
+# bb811996
+; Rola.HappyTalk: Okay, good luck!
+Rola.HappyTalk: Гаразд, удачі!
+
+# 4684171b
+; There's no one here, your assignment is {quest}
+Тут нікого немає, ваше завдання - {quest}
+
+# b25ddc42
+; Rola.HappyTalk: Oh, I see you did it.
+Rola.HappyTalk: О, я бачу, тобі вдалося.
+
+# 10f54005
+; Alex.HappyTalk: Well done, rookie, well, you can give me the suitcase and we can split up.
+Alex.HappyTalk: Молодець, новачку, можеш віддати мені валізу, і ми можемо розійтися.
+
+# a6e13a88
+; Rola.AngryTalk: What do you mean give you Alex, that wasn't the deal.
+Rola.AngryTalk: Що ти маєш на увазі під «віддати тобі Алекс», ми так не домовлялися.
+
+# 9c02a12
+; Alex.HappyTalk: Because I have more use for this product than your customer.
+Alex.HappyTalk: Тому що мені цей продукт потрібен більше, ніж вашому клієнтові.
+
+# f8e531ed
+; Rola.AngryTalk: Don't listen to him, he's out of his mind, give me the case.
+
+# 282b2f0d
+; @choice "Give the case to Rola" goto:.GiveToRola
+@choice "Віддати кейс Ролі" goto:.GiveToRola
+
+# d78b8d38
+; @choice "Give the case to Alex" goto:.GiveToAlex
+@choice "Віддати кейс Алексу" goto:.GiveToAlex
+
+# e8d8a325
+; @choice "Keep it" goto:.KeepIt
+@choice "\"Залишити собі\"." goto:.KeepIt
+
+# bda3e5ca
+; {name}: We have to honour our agreements, Rola, take the case.
+{name}: Ми повинні дотримуватися наших домовленостей, Роло, ця валіза твоя.
+
+# 5beb4eb6
+; Alex.Angry: Suit yourself, {name}, but remember who would be a more loyal ally.
+Alex.Angry: Роби як знаєш, {name}, але пам'ятай, хто був би більш вірним союзником.
+
+# 3fae40b7
+; Rola.HappyTalk: Thank you, {name}. You will not regret making this choice.
+Rola.HappyTalk: Дякую, {name}. Ви не пошкодуєте про свій вибір.
+
+# 48a661cd
+; {name}: Alex, you have more credibility with me, hold the case.
+{name}: Алекс, ти мені більше довіряєш, візьми цю валізу.
+
+# d2da59b6
+; Rola.AngryTalk: Idiot, does anyone in this world know how to keep a promise?
+Rola.AngryTalk: Ідіот, хіба хтось у цьому світі вміє тримати обіцянки?
+
+# e7ec6e14
+; Alex.HappyTalk: Good job. Come back to my bar if you need to.
+Alex.HappyTalk: Молодець. Заходьте до мого бару, якщо буде потрібно.
+
+# 4050616f
+; {name}: I can't trust you with it, I'll keep it with me.
+{name}: Я не можу довірити його вам, я залишу його собі.
+
+# 9a59d33c
+; Rola.AngryTalk: How dare you, get out of here!
+Rola.AngryTalk: Як ти смієш, забирайся звідси!
+
+# 6f93ae0
+; Alex.Angry: We'll remember that.
+Alex.Angry: Ми це запам'ятаємо.
+
+# 331c85c6
+; Well, what have I done? [i] Maybe I should get out of here
+Ну і, що я наробив? [i]Може, мені варто піти звідси.
+
+# 42db942b
+; Rola.HappyTalk: You have no idea what we can do with that suitcase. My client will be very pleased, thank you. [i] If you need any help, come on in, I'm here for you.
+Rola.HappyTalk: Ви навіть не уявляєте, що ми можемо зробити з цією валізою. Мій клієнт буде дуже задоволений, дякую. [i]Якщо вам потрібна буде допомога, заходьте, я тут для вас.
+
+# 98c9c4e0
+; {name}: I'll definitely come back again. 
+{name}: Я обов'язково повернуся знову. 
+
+# a274ce6c
+; Bye-bye.
+Бувай, бувай.
+
+# 8885fd79
+; Rola.AngryTalk: Why are you here? To apologise? Or maybe a guilty conscience? [i] Either way, I don't want to hear from you, get out of here!
+Rola.AngryTalk: Чому ти тут? Щоб вибачитися? Чи, може, совість замучала? [i]У будь-якому випадку, я не хочу нічого від тебе чути, забирайся звідси!
+
+# b26c3cd3
+; @choice "Give the case to Rola" goto:.GiveToRolaPersonally
+@choice "Віддати валізу Ролі" goto:.GiveToRolaPersonally
+
+# 945af136
+; @choice "Keep the case"
+@choice "Залишити кейс собі"
+
+# 84b02f01
+; Rola.AngryTalk: I said get out of here!
+Rola.AngryTalk: Я сказала, забирайся звідси!
+
+# c7c10d81
+; Rola.Surprised: What, so you tricked Alex into giving the case to me so he wouldn't see it? [i] I didn't realise you were such a gentleman.
+Rola.Surprised: То ти обманув Алекса, щоб він не подумав, що валіза в мене?[i]Я не знала, що ви такий джентльмен.

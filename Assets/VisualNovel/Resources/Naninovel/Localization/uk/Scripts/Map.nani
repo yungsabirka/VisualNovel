@@ -1,0 +1,10 @@
+; English <en> to Ukrainian <uk> localization document for `Map` naninovel script
+
+# 4868e059
+; @choice  button:MapButtons/Balcony pos:-400,0 handler:ButtonArea goto:Balcony
+
+# fd13d7ea
+; @choice  button:MapButtons/Bar pos:0,0 handler:ButtonArea goto:Bar
+
+# 311efed
+; @choice  button:MapButtons/Rooftop pos:400,0 handler:ButtonArea goto:Rooftop

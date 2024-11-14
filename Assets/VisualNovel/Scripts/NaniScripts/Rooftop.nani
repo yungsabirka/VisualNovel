@@ -1,0 +1,27 @@
+@hideUI OpenMapButtonUI
+@back Rooftop
+You arrive at the place indicated by Alex. After effortlessly passing through security, you use your card as identification and go up to the roof.
+A luxurious terrace opens up in front of you: a sparkling pool, an elegant kitchen and tables decorated with exotic cocktails.
+
+As you look around the space, you notice a safe disguised in the shadows - it looks like it's the one you need to open.
+
+@choice "Use card to open the safe"
+@stop
+
+Calmly approaching, you enter the code on the back of the card and pick the lock, taking the suitcase with its contents.
+
+@set quest="Back to Alex's bar."
+
+However, as you are about to leave, a sudden vibration pierces the building.
+{name}: Shit...
+@spawn ShakeBackground params:,0 wait:false
+
+The floor beneath you begins to shake, and it becomes obvious that something has gone wrong - the building seems to collapse before your eyes.
+
+You start running, barely holding the heavy suitcase in your hands.[i] The lift doesn't work and the stairs seem eternal, just a moment more and the whole building will fall down.
+Luckily, you manage to escape and return to the bar.
+
+@set hasCase=true
+@despawn ShakeBackground
+@goto Bar.TaskCompleted
+@stop

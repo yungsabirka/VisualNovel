@@ -1,0 +1,5 @@
+@back Street
+@hideUI QuestsUI
+Well, I guess that's the end of the story.
+@showUI OpenMapButtonUI
+@stop

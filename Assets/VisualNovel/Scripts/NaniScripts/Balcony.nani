@@ -1,0 +1,150 @@
+@back Balcony
+@set lockBar=false
+@set lockBalcony=false
+@set lockRooftop=true
+@printer CustomDialogPrinter
+
+
+@if currentBalconyLabel!=""
+@goto .{currentBalconyLabel}
+@endif
+
+# Intro
+@set currentBalconyLabel="Intro"
+@bgm Cybersewers
+@set "quest=\"Understand what is going on\""
+
+You find yourself in a bustling city, having recently arrived after hearing rumors of strange events that needed investigating. A contact named Rola, known for her insight and resourcefulness, had reached out to you with an urgent message.
+@showUI QuestsUI
+@char Rola.Happy pos:-30
+@char Rola.Happy pos:30 wait:true
+Rola.HappyTalk: Ah, you're finally here. Before we start, tell me your name.
+@char Rola.Happy
+
+@input name summary:"Choose your name."
+@stop
+
+Rola.HappyTalk: Good {name} Now listen closely. There’s a particular shipment—an item that needs discreet handling. Alex in the bar has the details you need. Seek him out and stay alert. We’re counting on you.
+@char Rola.Happy
+{name}: Understood. I’ll find Alex.
+
+@set "quest=\"Find Alex in bar\""
+
+Rola.HappyTalk: Okay, good luck!
+@char Rola.Happy pos:120 wait:true
+@hideChars wait:true
+@set currentBalconyLabel="Empty"
+@showUI OpenMapButtonUI
+@stop
+
+# Empty
+There's no one here, your assignment is {quest}
+@showUI QuestsUI
+@showUI OpenMapButtonUI
+@stop
+
+# Ending
+@char Rola.Happy pos:-30
+@char Alex.Happy pos:120
+@char Rola.Happy pos:30,-20
+@char Alex.Happy pos:80 wait:true
+
+Rola.HappyTalk: Oh, I see you did it.
+Alex.HappyTalk: Well done, rookie, well, you can give me the suitcase and we can split up.
+@char Alex.Happy
+Rola.AngryTalk: What do you mean give you Alex, that wasn't the deal.
+@char Rola.Angry
+
+Alex.HappyTalk: Because I have more use for this product than your customer.
+@char Alex.Normal
+Rola.AngryTalk: Don't listen to him, he's out of his mind, give me the case.
+
+@char Rola.Angry
+
+@set quest="Decide who to give the case to"
+
+@choice "Give the case to Rola" goto:.GiveToRola
+@choice "Give the case to Alex" goto:.GiveToAlex
+@choice "Keep it" goto:.KeepIt
+@stop
+
+# GiveToRola
+@purgeRollback
+@set hasCase=false
+@set currentBalconyLabel="GiveToRola"
+@set currentBarLabel="AlexDoesntHasCase"
+{name}: We have to honour our agreements, Rola, take the case.
+@char Rola.Embarrassed
+Alex.Angry: Suit yourself, {name}, but remember who would be a more loyal ally.
+@char Alex.Angry pos:150 wait:true
+@char Rola.HappyTalk pos:45,-20
+Rola.HappyTalk: Thank you, {name}. You will not regret making this choice.
+@char Rola.Embarrassed pos:-30,-20 wait:true
+@hideChars wait:true
+@set currentBalconyLabel="RolaHasCase"
+@goto Street
+@stop
+
+# GiveToAlex
+@purgeRollback
+@set hasCase=false
+@set currentBalconyLabel="GiveToAlex"
+@set currentBarLabel="AlexHasCase"
+{name}: Alex, you have more credibility with me, hold the case.
+@char Alex.Happy
+Rola.AngryTalk: Idiot, does anyone in this world know how to keep a promise?
+@char Rola.Angry pos:-30,-20 wait:true
+@char Alex.Happy pos:45
+Alex.HappyTalk: Good job. Come back to my bar if you need to.
+@char Alex.Happy pos:120 wait:true
+@hideChars wait:true
+@set currentBalconyLabel="RolaDoesntHasCase"
+@goto Street
+@stop
+
+# KeepIt
+@purgeRollback
+@set currentBalconyLabel="KeepIt"
+@set currentBarLabel="AlexDoesntHasCase"
+{name}: I can't trust you with it, I'll keep it with me.
+@char Alex.Angry
+Rola.AngryTalk: How dare you, get out of here!
+@char Rola.Angry
+Alex.Angry: We'll remember that.
+@char Alex.Angry pos:120
+@char Rola.Angry pos:-30,-20 wait:true
+@hideChars wait:true
+Well, what have I done? [i] Maybe I should get out of here
+@set currentBalconyLabel="RolaDoesntHasCase"
+@goto Street
+@stop
+
+# RolaHasCase
+@char Rola
+Rola.HappyTalk: You have no idea what we can do with that suitcase. My client will be very pleased, thank you. [i] If you need any help, come on in, I'm here for you.
+{name}: I'll definitely come back again. 
+Bye-bye.
+@hideChars wait:true
+@goto Street
+@stop
+
+# RolaDoesntHasCase
+@char Rola
+Rola.AngryTalk: Why are you here? To apologise? Or maybe a guilty conscience? [i] Either way, I don't want to hear from you, get out of here!
+
+@if hasCase
+@choice "Give the case to Rola" goto:.GiveToRolaPersonally
+@choice "Keep the case"
+@stop
+@endif
+Rola.AngryTalk: I said get out of here!
+@hideChars wait:true
+@goto Street
+@stop
+
+# GiveToRolaPersonally
+@set hasCase=false
+@set currentBalconyLabel="RolaHasCase"
+Rola.Surprised: What, so you tricked Alex into giving the case to me so he wouldn't see it? [i] I didn't realise you were such a gentleman.
+@goto .RolaHasCase
+@stop

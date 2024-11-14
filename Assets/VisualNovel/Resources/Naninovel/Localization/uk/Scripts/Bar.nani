@@ -1,0 +1,122 @@
+; English <en> to Ukrainian <uk> localization document for `Bar` naninovel script
+
+# 685d9e49
+; You walk into a noisy bar, where the air is filled with thick smoke and the hum of conversation.
+Ви заходите в галасливий бар, де повітря наповнене густим димом і гулом розмов.
+
+# 6d9f6f67
+; The neon lights flicker, casting coloured reflections on the faces of the customers.
+Неонове світло мерехтить, кидаючи кольорові відблиски на обличчя відвідувачів.
+
+# 7b0a7a65
+; You look around, trying to find the Alex Rola mentioned. Suddenly, a tall man with a piercing stare approaches you.
+Ти озираєшся, намагаючись знайти Алекса, про якого згадувала Рола. Раптом до вас наближається високий чоловік з пронизливим поглядом.
+
+# e82da42c
+; Alex.Talk: Hi, {name}. You must be the one Rola told me about.
+Alex.Talk: Привіт, {name}. Ви, мабуть, той, про кого мені розповідала Рола.
+
+# 5fae629f
+; {name}: Yeah, that's me. And you must be Alex?
+{name}: Так, це я. А ти, мабуть, Алекс?
+
+# 5f143176
+; Alex.Talk: Exactly. It's good to finally meet you. [i] Rola's been talking about you a lot. What do you think of our place?
+Alex.Talk: Саме так. Приємно нарешті з вами познайомитися. [i]Рола багато про тебе розповідала. Що ти думаєш про наше місце?
+
+# 9932f4c5
+; @choice "It's beautiful here, although a bit noisy" goto:.GoodBar
+@choice "Тут гарно, хоч і трохи шумно" goto:.GoodBar
+
+
+# fa9777a5
+; @choice "To be honest, it doesn't look good, it's like it's for drug addicts and gangsters" goto:.BadBar
+@choice "Чесно кажучи, це виглядає не дуже добре, ніби це для наркоманів і гангстерів" goto:.BadBar
+
+# f44cb202
+; Alex.HappyTalk: Hahaha, you have a backbone for telling me so bluntly.
+Alex.HappyTalk: Ха-ха, у вас є хребет, щоб сказати мені це так відверто.
+
+# eb318374
+; Alex.Talk: I'm glad you like it here.
+Alex.Talk: Я радий, що вам тут подобається.
+
+# 396d92dc
+; Alex.Talk: It's also one of the few places where you can discuss business without anyone else hearing about it. [i] But let's get to the point. Before we go on a mission, we need to make sure you're ready.
+Alex.Talk: Це також одне з небагатьох місць, де ви можете обговорити бізнес так, щоб ніхто про це не почув. [i]Але перейдемо до справи. Перш ніж ми вирушимо на місію, ми повинні переконатися, що ви готові.
+
+# 282d18ee
+; Alex.Talk: I suggest we do a little training.
+Alex.Talk: Пропоную трохи потренуватися.
+
+# 54afec9f
+; {name}: All right, we can get started
+{name}: Гаразд, можемо починати.
+
+# 1ce66af8
+; Alex.HappyTalk: Well done, {name}! You exceeded my expectations. [i] Great, so we can move on to the assignment.
+Alex.HappyTalk: Молодець, {name}! Ти перевершив мої очікування. [i]Чудово, тож ми можемо перейти до завдання.
+
+# 2d1b27d9
+; You need to pick up a suitcase on the roof of a building in the next block. [i] Use that to get in, then go up to the roof. There shouldn't be any people there, just pick up the suitcase and come back here.
+Вам потрібно забрати валізу на даху будівлі в сусідньому кварталі. [i]Використовуйте це, щоб потрапити всередину, а потім підніміться на дах. Там не повинно бути людей, просто візьміть валізу і поверніться сюди.
+
+# 1cd31918
+; ‘The card's being passed around.’
+«Картку передали».
+
+# 27dde4ad
+; Alex.HappyTalk: Sounds simple, right? Just make sure the alarm doesn't go off when you get the case.
+Alex.HappyTalk: Звучить просто, чи не так? Просто переконайтеся, що сигналізація не спрацює, коли ви отримаєте кейс.
+
+# 113421d5
+; {name}: All right, I'll be on my way.
+{name}: Гаразд, я їду.
+
+# 9f6833d4
+; Alex.HappyTalk: Good luck.
+Alex.HappyTalk: Щасти тобі.
+
+# 4b0b25be
+; {name}: It was dangerous...
+{name}: Це було небезпечно...
+
+# 3fb9e049
+; You find yourself in the bar where you met Alex before. But he's no longer there, only a note.
+Ви опиняєтеся в барі, де раніше зустрічалися з Алексом. Але його там більше немає, лише записка.
+
+# b9d2ee3c
+; @choice "Read the note"
+@choice "Прочитати записку"
+
+# 178f8e70
+; It says, ‘Go to the balcony where you met Rola, I'll be waiting for you there.’
+Там написано: «Іди на балкон, де ти зустрів Ролу, я чекатиму на тебе там».
+
+# 5861f7a2
+; Alex.HappyTalk: Thank you for giving the case to me and not that stuck-up woman. [i] If anything, my bar is always open to you.
+Alex.HappyTalk: Дякую, що віддали валізу мені, а не тій зарозумілій жінці. [i]Якщо що, мій бар завжди відкритий для вас.
+
+# 9738154b
+; {name}: Thank you, I'll keep that in mind.
+{name}: Дякую, буду мати це на увазі.
+
+# 5a9d12d3
+; Alex.Angry: So why did you come here. My bar is closed to you forever.
+Alex.Angry: То навіщо ти прийшов сюди? Мій бар закритий для тебе назавжди.
+
+# dd3b5c5e
+; @choice "Give the case to Alex" goto:.GiveToAlexPersonally
+@choice "Віддати валізу Алексу" goto:.GiveToAlexPersonally
+
+# 945af136
+; @choice "Keep the case"
+@choice "Залишити собі валізу"
+
+# 3bdf7e29
+; Alex.TooAngry: I told you the bar is closed to you, get out of here!
+Alex.TooAngry: Я ж сказав, що бар для вас зачинений, забирайтеся звідси!
+
+# 1ab6a3d3
+; Alex.HappyTalk: That's it, rookie! I didn't expect you to twist it like that. [i] So this whole scene was to make Rola think you'd keep the briefcase. You know how to surprise me.
+Alex.HappyTalk: Ось так, новачку! Я не очікував, що ти так закрутиш.[i]Отже, вся ця сцена була для того, щоб Рола думала, що ти залишиш портфель собі. Ти знаєш, як мене здивувати.

@@ -1,0 +1,17 @@
+@hideChars
+@hidePrinter
+@hideUI OpenMapButtonUI
+@back Map
+
+@unlock BalconyButton
+@unlock BarButton
+@unlock RooftopButton
+
+@lock BalconyButton if:lockBalcony
+@lock BarButton if:lockBar
+@lock RooftopButton if:lockRooftop
+
+@choice  button:MapButtons/Balcony pos:-400,0 handler:ButtonArea goto:Balcony
+@choice  button:MapButtons/Bar pos:0,0 handler:ButtonArea goto:Bar
+@choice  button:MapButtons/Rooftop pos:400,0 handler:ButtonArea goto:Rooftop
+@stop

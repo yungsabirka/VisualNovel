@@ -1,0 +1,41 @@
+; English <en> to Ukrainian <uk> localization document for `Rooftop` naninovel script
+
+# c843305e
+; You arrive at the place indicated by Alex. After effortlessly passing through security, you use your card as identification and go up to the roof.
+Ви прибуваєте на місце, вказане Алексом. Легко пройшовши через охорону, ви використовуєте свою картку як посвідчення особи і піднімаєтеся на дах.
+
+# 83275e68
+; A luxurious terrace opens up in front of you: a sparkling pool, an elegant kitchen and tables decorated with exotic cocktails.
+Перед вами відкривається розкішна тераса: блискучий басейн, елегантна кухня і столики, прикрашені екзотичними коктейлями.
+
+# 48a5d0f1
+; As you look around the space, you notice a safe disguised in the shadows - it looks like it's the one you need to open.
+Оглядаючи простір, ви помічаєте замаскований у тіні сейф - схоже, це саме той, який вам потрібно відкрити.
+
+# 78323504
+; @choice "Use card to open the safe"
+@choice "Використати картку для відкриття сейфу"
+
+# 24183db2
+; Calmly approaching, you enter the code on the back of the card and pick the lock, taking the suitcase with its contents.
+Спокійно наблизившись, ви вводите код на звороті картки і відкриваєте замок, забираючи валізу з її вмістом.
+
+# cc2827a0
+; However, as you are about to leave, a sudden vibration pierces the building.
+Однак, коли ви вже збираєтесь виходити, будівлю пронизує раптова вібрація.
+
+# ec6f7cdd
+; {name}: Shit...
+{name}: Лайно...
+
+# ab7ca1fc
+; The floor beneath you begins to shake, and it becomes obvious that something has gone wrong - the building seems to collapse before your eyes.
+Підлога під вами починає трястися, і стає очевидно, що щось пішло не так - будівля, здається, руйнується на ваших очах.
+
+# 3001f847
+; You start running, barely holding the heavy suitcase in your hands.[i] The lift doesn't work and the stairs seem eternal, just a moment more and the whole building will fall down.
+Ти починаєш бігти, ледве втримуючи важку валізу в руках.[i] Ліфт не працює, а сходи здаються вічними, ще мить - і вся будівля завалиться.
+
+# e3460e94
+; Luckily, you manage to escape and return to the bar.
+На щастя, вам вдається втекти і повернутися до бару.
